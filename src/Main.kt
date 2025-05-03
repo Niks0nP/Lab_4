@@ -1,10 +1,14 @@
+import java.io.File
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    val name = "Kotlin"
-    println("Hello, $name!")
+    readFile()
+}
 
-    for (i in 1..5) {
-        println("i = $i")
-    }
+fun readFile() {
+    val file = File("task.txt")
+    val text = file.readText()
+
+    println(text)
 }
